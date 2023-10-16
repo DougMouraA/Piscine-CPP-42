@@ -6,7 +6,7 @@
 /*   By: douglas <douglas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 16:49:09 by douglas           #+#    #+#             */
-/*   Updated: 2023/08/18 14:29:46 by douglas          ###   ########.fr       */
+/*   Updated: 2023/10/11 09:47:57 by douglas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <iostream>
 #include <sstream>
 #include <stdio.h>
+#include <iomanip>
 
 class Contact 
 {
