@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: douglas <douglas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/17 11:30:09 by douglas           #+#    #+#             */
-/*   Updated: 2023/11/07 19:03:34 by douglas          ###   ########.fr       */
+/*   Created: 2023/11/09 21:14:46 by douglas           #+#    #+#             */
+/*   Updated: 2023/11/09 21:25:22 by douglas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef WRONGCAT_HPP
+#define WRONGCAT_HPP
 
-int main(void)
-{
-    Zombie* horde = zombieHorde(10, "Douglas");
-    delete [] horde;
-    return (0);
-}
+#include "WrongAnimal.hpp"
+
+class WrongCat : public WrongAnimal {
+    public:
+        WrongCat();
+        WrongCat(WrongCat const &copy);
+        ~WrongCat();
+
+        WrongCat &operator=(WrongCat const &copy);
+
+        void makeSound() const;
+};
+
+#endif

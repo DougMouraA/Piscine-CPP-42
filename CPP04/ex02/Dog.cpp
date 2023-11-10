@@ -6,11 +6,13 @@
 /*   By: douglas <douglas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 17:20:39 by douglas           #+#    #+#             */
-/*   Updated: 2023/10/27 15:14:10 by douglas          ###   ########.fr       */
+/*   Updated: 2023/11/09 21:47:15 by douglas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
+#include "Dog.hpp"
+#include "Brain.hpp"
 
 Dog::Dog(){
     this->brain = new Brain();

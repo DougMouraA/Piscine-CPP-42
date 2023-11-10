@@ -6,7 +6,7 @@
 /*   By: douglas <douglas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 14:51:25 by douglas           #+#    #+#             */
-/*   Updated: 2023/10/26 15:04:39 by douglas          ###   ########.fr       */
+/*   Updated: 2023/11/09 21:06:54 by douglas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,28 +30,6 @@ class Animal {
         
         void setType(std::string nameAnimal);
         std::string getType() const;
-};
-
-class Cat : public Animal {
-    public:
-        Cat();
-        Cat(Cat const &copy);
-        ~Cat();
-
-        Cat &operator=(Cat const &copy);
-
-        virtual void makeSound() const;
-};
-
-class Dog : public Animal {
-    public:
-        Dog();
-        Dog(Dog const &copy);
-        ~Dog();
-
-        Dog &operator=(Dog const &copy);
-        
-        virtual void makeSound() const;
 };
 
 #endif

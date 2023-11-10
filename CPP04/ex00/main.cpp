@@ -6,12 +6,15 @@
 /*   By: douglas <douglas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 17:55:59 by douglas           #+#    #+#             */
-/*   Updated: 2023/10/26 18:08:44 by douglas          ###   ########.fr       */
+/*   Updated: 2023/11/09 21:18:46 by douglas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
+#include "Cat.hpp"
+#include "Dog.hpp"
 #include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 
 int main(void) {
 	std::cout << "----- Constructors -----" << std::endl;

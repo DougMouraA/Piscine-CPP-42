@@ -6,7 +6,7 @@
 /*   By: douglas <douglas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 10:20:04 by douglas           #+#    #+#             */
-/*   Updated: 2023/10/26 10:29:12 by douglas          ###   ########.fr       */
+/*   Updated: 2023/11/09 22:59:18 by douglas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ class FragTrap : public ClapTrap
 
         FragTrap &operator=(const FragTrap &copy);
         
-        void highFivesGuys(void);
+        void attack(std::string const & target);
+        void highFivesGuy(void);
 };
 
 

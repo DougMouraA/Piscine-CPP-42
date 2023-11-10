@@ -6,7 +6,7 @@
 /*   By: douglas <douglas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 09:09:08 by douglas           #+#    #+#             */
-/*   Updated: 2023/10/16 10:06:03 by douglas          ###   ########.fr       */
+/*   Updated: 2023/11/07 18:42:43 by douglas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,19 +20,15 @@ int main(void){
     while (1){
         std::cout << "Enter a command: ";
         getline(std::cin, input);
-        if (input.empty())
+        if (input == "ADD"){
+            phoneBook.addContact();
+        }else if (input == "SEARCH"){
+            phoneBook.displayContacts();
+            phoneBook.searchContact();
+        }else if (input == "EXIT"){
             break;
-        else {
-            if (input == "ADD"){
-                phoneBook.addContact();
-            }else if (input == "SEARCH"){
-                phoneBook.displayContacts();
-                phoneBook.searchContact();
-            }else if (input == "EXIT"){
-                break;
-            }else {
-                std::cout << "Invalid command" << std::endl;
-            }
+        }else {
+            std::cout << "Invalid command" << std::endl;
         }
     }
     std::cout << "Bye bye!" << std::endl;

@@ -6,11 +6,13 @@
 /*   By: douglas <douglas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 17:19:36 by douglas           #+#    #+#             */
-/*   Updated: 2023/10/27 15:14:23 by douglas          ###   ########.fr       */
+/*   Updated: 2023/11/09 21:46:59 by douglas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
+#include "Cat.hpp"
+#include "Brain.hpp"
 
 Cat::Cat(){
     this->brain = new Brain();

@@ -6,7 +6,7 @@
 #    By: douglas <douglas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/26 17:57:39 by douglas           #+#    #+#              #
-#    Updated: 2023/10/26 17:58:13 by douglas          ###   ########.fr        #
+#    Updated: 2023/11/09 21:21:47 by douglas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ SRC_FILES = Animal \
 			Dog \
 			Cat \
 			WrongAnimal \
-			main
+			main \
+			WrongCat
 
 SRC = $(addsuffix .cpp, $(SRC_FILES))
 OBJ = $(addsuffix .o, $(SRC_FILES))

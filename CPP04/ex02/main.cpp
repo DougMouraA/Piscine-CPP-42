@@ -6,11 +6,14 @@
 /*   By: douglas <douglas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 15:15:09 by douglas           #+#    #+#             */
-/*   Updated: 2023/10/27 15:28:08 by douglas          ###   ########.fr       */
+/*   Updated: 2023/11/09 21:50:14 by douglas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
+#include "Brain.hpp"
+#include "Dog.hpp"
+#include "Cat.hpp"
 
 int main(void) {
 	std::cout << "----- Constructors -----" << std::endl;

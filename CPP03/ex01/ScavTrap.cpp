@@ -6,75 +6,60 @@
 /*   By: douglas <douglas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 17:13:29 by douglas           #+#    #+#             */
-/*   Updated: 2023/10/26 09:58:04 by douglas          ###   ########.fr       */
+/*   Updated: 2023/11/09 22:51:43 by douglas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap()
-{
-    std::cout << "ScavTrap default constructor called" << std::endl;
-    this->setName("ScavTrap");
-    this->setAttackDamage(100);
-    this->setEnergyPoints(50);
-    this->setHitPoints(20);
+ScavTrap::ScavTrap(void) {
+	std::cout << "ScavTrap default constructor called" << std::endl;
+	this->name = "defaultName";
+	this->hitPoints = 100;
+	this->energyPoints = 50;
+	this->attackDamage = 20;
 }
 
-ScavTrap::ScavTrap(std::string name)
-{
-    std::cout << "ScavTrap constructor called" << std::endl;
-    this->setName(name);
-    this->setAttackDamage(100);
-    this->setEnergyPoints(50);
-    this->setHitPoints(20);
+ScavTrap::ScavTrap(std::string name) {
+	std::cout << "ScavTrap name constructor called" << std::endl;
+	this->name = name;
+	this->hitPoints = 100;
+	this->energyPoints = 50;
+	this->attackDamage = 20;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &copy) : ClapTrap(copy)
-{
-    std::cout << "ScavTrap copy constructor called" << std::endl;
-    *this = copy;
+ScavTrap::ScavTrap(ScavTrap const &scavTrap) : ClapTrap(scavTrap) {
+	std::cout << "ScavTrap copy constructor called" << std::endl;
+	*this = scavTrap;
 }
 
-ScavTrap::~ScavTrap()
-{
-    std::cout << "ScavTrap destructor called" << std::endl;
+ScavTrap::~ScavTrap(void) {
+	std::cout << "ScavTrap destructor called" << std::endl;
 }
 
-ScavTrap& ScavTrap::operator=(const ScavTrap& copy)
-{
-    std::cout << "ScavTrap assignation operator called" << std::endl;
-    ClapTrap::operator=(copy);
-    return *this;
+ScavTrap &ScavTrap::operator=(ScavTrap const &scavTrap) {
+	std::cout << "ScavTrap copy assignment operator called" << std::endl;
+	this->name = scavTrap.name;
+	this->hitPoints = scavTrap.hitPoints;
+	this->energyPoints = scavTrap.energyPoints;
+	this->attackDamage = scavTrap.attackDamage;
+	return *this;	
 }
 
-void ScavTrap::attack(std::string const & target)
-{
-    if (this->getEnergyPoints() > 0 && this->getHitPoints() > 0)
-    {
-        this->setEnergyPoints(this->getEnergyPoints() - 1);
-        std::cout << "ScavTrap " << this->getName() << " attack " << target << ", causing " << this->getAttackDamage() << " points of damage!" << std::endl;
-    }
-    else
-        std::cout << "ScavTrap " << this->getName() << " is out of energy points or hit points!" << std::endl;
+void ScavTrap::attack(const std::string& target) {
+	if (!this->hitPoints) {
+		std::cout << this->name << " is dead already!" << std::endl;
+		return;
+	}
+	else if (!this->energyPoints) {
+		std::cout << this->name << "'s energy points are empty!" << std::endl;
+		return;
+	}
+	std::cout << "ScavTrap " << this->name << " attacks " << target << ", causing " << this->attackDamage << " points of damage!" << std::endl;
+
+	this->energyPoints--;
 }
 
-void ScavTrap::beRepaired(unsigned int amount)
-{
-    if (this->getEnergyPoints() > 0)
-    {
-        this->setHitPoints(this->getHitPoints() + amount);
-        if (this->getHitPoints() > 20)
-            this->setHitPoints(20);
-        this->setEnergyPoints(this->getEnergyPoints() - 1);
-        std::cout << "ScavTrap " << this->getName() << " has been repaired by " << amount << " points!" << std::endl;
-    }
-    else
-        std::cout << "ScavTrap " << this->getName() << " is out of energy points!" << std::endl;
+void ScavTrap::guardGate() {
+	std::cout << "ScavTrap " << this->name << " is now in Gate keeper mode" << std::endl;
 }
-
-void ScavTrap::guardGate()
-{
-    std::cout << "ScavTrap " << this->getName() << " has enterred in Gate keeper mode" << std::endl;
-}
-

@@ -6,11 +6,12 @@
 /*   By: douglas <douglas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 17:19:36 by douglas           #+#    #+#             */
-/*   Updated: 2023/10/26 17:58:58 by douglas          ###   ########.fr       */
+/*   Updated: 2023/11/09 21:09:19 by douglas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
+#include "Cat.hpp"
 
 Cat::Cat(){
     std::cout << "Cat default constructor called" << std::endl;
